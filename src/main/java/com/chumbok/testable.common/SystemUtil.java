@@ -13,9 +13,20 @@ public class SystemUtil {
     /**
      * Return user home directory path.
      * Example: /Users/mossaddeque
+     *
+     * @return the user home
      */
     public String getUserHome() {
         return System.getProperty(USER_HOME);
+    }
+
+    /**
+     * Gets runtime.
+     *
+     * @return the runtime
+     */
+    public Runtime getRuntime() {
+        return Runtime.getRuntime();
     }
 
 }
