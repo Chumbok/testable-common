@@ -25,4 +25,9 @@ public class SlugUtilTest {
     public void toSlugtoLowercaseTest() {
         assertEquals("hello-world", new SlugUtil().toSlug("Hello World"));
     }
+
+    @Test
+    public void toSlugUnicodeContainsUnicode() {
+        assertEquals("hello-বাংলাদেশ-hello", new SlugUtil().toSlugUnicode("Hello বাংলাদেশ! Hello!"));
+    }
 }
