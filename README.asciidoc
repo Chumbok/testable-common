@@ -1,0 +1,61 @@
+# Testable Common
+
+Static methods in utils class/libraries are hard.
+
+
+## How to use
+
+Add following dependency in your pom.xml
+```
+<dependency>
+    <groupId>com.chumbok</groupId>
+    <artifactId>testable-common</artifactId>
+    <version>1.2.0</version>
+</dependency>
+```
+
+Add repository:
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+
+## How to use this library
+
+Same as you use java class, simply methods are not static.
+
+## APIs
+
+#### CookieUtil.java
+- public Cookie getCookie(String name, String value);
+
+#### DateUtil.java
+- public LocalDateTime getCurrentLocalDateTime();
+- public Date getCurrentDate();
+- public Calendar getCalendar();
+- public String getCurrentYearMonthDateString();
+
+#### FileSystemUtil.java
+- public void write(Path path, byte[] fileBytes) throws IOException;
+- public void createDirectories(Path path) throws IOException;
+
+#### SlugUtil.java
+- public String toSlug(String input);
+- public String toSlugUnicode(String input);
+
+#### SystemUtil.java
+- public String getUserHome();
+- public Runtime getRuntime();
+
+#### UrlUtil.java
+- public Map<String, String> getQueryMap(String url);
+- public String utf8Encode(String value);
+- public String utf8Decode(String value);
+
+#### UuidUtil.java
+- public String getUuid();
