@@ -1,5 +1,6 @@
 package com.chumbok.testable.common;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
@@ -39,5 +40,14 @@ public class DateUtil {
         return calendar.get(Calendar.YEAR) + "/"
                 + (calendar.get(Calendar.MONTH) + 1) + "/"
                 + calendar.get(Calendar.DATE);
+    }
+
+    /**
+     * Return current system time in millis.
+     *
+     * @return time in millis.
+     */
+    public long getCurrentTimeEpochMilli() {
+        return Instant.now().toEpochMilli();
     }
 }
