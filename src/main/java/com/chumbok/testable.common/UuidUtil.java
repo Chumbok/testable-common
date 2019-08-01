@@ -8,10 +8,11 @@ import java.util.UUID;
 public class UuidUtil {
 
     /**
-     * Returns ramdom UUID as String
-     * @return
+     * Returns ramdom UUID as String.
+     *
+     * @return UUID as string.
      */
-    public String getUuid() {
+    public String getRandomUuid() {
         return UUID.randomUUID().toString();
     }
 }
